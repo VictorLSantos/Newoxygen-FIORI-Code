@@ -1,0 +1,24 @@
+{
+  "Invoices": [
+    {
+      "ProductName": "Mackbook Pro",
+      "Quantity": 21,
+      "ExtendedPrice": 2399.99
+    },
+    {
+      "ProductName": "Acer Nitro 5",
+      "Quantity": 4,
+      "ExtendedPrice": 1999.99
+    },
+    {
+      "ProductName": "Dell Inspirion",
+      "Quantity": 3,
+      "ExtendedPrice": 1789.99
+    },
+    {
+      "ProductName": "HP Pavilion",
+      "Quantity": 2,
+      "ExtendedPrice": 2099.99
+    }
+  ]
+}

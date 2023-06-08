@@ -1,0 +1,22 @@
+<mvc:View
+controllerName="my.app.controller.MainPage"
+xmlns:mvc="sap.ui.core.mvc"
+xmlns="sap.m"
+displayBlock = "true"
+>
+<Shell>
+   <App id="app">
+      <pages>
+      	<Page title="Products List">
+                  <content>
+  						      <mvc:XMLView viewName="my.app.view.Notification"/>
+                        <mvc:XMLView viewName="my.app.view.ProductList"/>
+                  </content>
+         </Page>
+      </pages>
+   </App>
+</Shell>
+
+
+
+</mvc:View>

@@ -1,0 +1,84 @@
+{
+  "_version": "1.12.0",
+  "sap.app": {
+    "id": "my.app",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "title": "My Project",
+    "description": "Product List",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "my.app.view.MainPage",
+      "type": "XML",
+      "id": "app"
+    },
+    "contentDensities": { "cozy": true, "compact": false },
+    "dependencies": {
+      "minUI5Version": "1.93",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {}
+      }
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "my.app.i18n.i18n",
+          "supportedLocales": [""],
+          "fallbackLocale": ""
+        }
+      },
+      "invoice": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "Invoices.json"
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "type": "View",
+        "viewType": "XML",
+        "path": "my.app.view",
+        "controlId": "app",
+        "controlAggregation": "pages"
+      },
+
+      "routes": [
+        {
+          "pattern": "",
+          "name": "MainPage",
+          "target": "MainPage"
+        },
+        {
+          "pattern": "detailProducts",
+          "name": "DetailProducts",
+          "target": "DetailProducts"
+        }
+      ],
+      "targets": {
+        "MainPage": {
+          "id": "MainPage",
+          "name": "MainPage"
+        },
+        "DetailProducts": {
+          "id": "DetailProducts",
+          "name": "DetailProducts"
+        }
+      }
+    }
+  }
+}
